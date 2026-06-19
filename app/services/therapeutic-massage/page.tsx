@@ -2,7 +2,10 @@ import type { Metadata } from 'next';
 import PageHero from '@/components/ui/PageHero';
 import BookingButton from '@/components/ui/BookingButton';
 
-export const metadata: Metadata = { title: 'Therapeutic Massage | Well Kneaded' };
+export const metadata: Metadata = {
+  title: 'Therapeutic Massage | Well Kneaded',
+  description: 'Swedish, deep tissue, sports, prenatal, and specialty massage in Decatur, GA. Specializing in post-surgery and chronic pain relief.',
+};
 
 const MODALITIES = [
   { name: 'Swedish / Relaxation', desc: 'Long, flowing strokes to improve circulation, relieve tension, and promote relaxation.' },

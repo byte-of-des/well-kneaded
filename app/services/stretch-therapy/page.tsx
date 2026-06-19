@@ -2,7 +2,10 @@ import type { Metadata } from 'next';
 import PageHero from '@/components/ui/PageHero';
 import BookingButton from '@/components/ui/BookingButton';
 
-export const metadata: Metadata = { title: 'Stretch-n-Flex Therapy | Well Kneaded' };
+export const metadata: Metadata = {
+  title: 'Stretch-n-Flex Therapy | Well Kneaded',
+  description: '1-on-1 assisted stretching sessions using PNF and active isolated techniques. Increase flexibility and reduce pain in Decatur, GA.',
+};
 
 export default function StretchTherapyPage() {
   return (

@@ -19,7 +19,7 @@ export default function BookingButton({ label = 'Book Now', location = 'main', c
             rel="noopener noreferrer"
             className="px-6 py-3 bg-[var(--text)] text-white text-sm text-center rounded-sm hover:bg-[var(--muted)] transition-colors"
           >
-            Book — {loc.name}
+            Book at {loc.name}
           </a>
         ))}
       </div>

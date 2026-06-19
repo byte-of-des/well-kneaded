@@ -2,7 +2,10 @@ import type { Metadata } from 'next';
 import PageHero from '@/components/ui/PageHero';
 import BookingButton from '@/components/ui/BookingButton';
 
-export const metadata: Metadata = { title: 'Wellness & Detox | Well Kneaded' };
+export const metadata: Metadata = {
+  title: 'Wellness & Detox | Well Kneaded',
+  description: 'Ionic foot detox, infrared sauna, red light therapy, and yoni steams in Decatur, GA. Natural detox and wellness services.',
+};
 
 const SERVICES = [
   { name: 'Ionic Foot Detox', duration: '30 min', desc: 'Facilitates body alkalization through ionization, removing free radicals and increasing pH levels. Continues alkalizing for up to 48 hours post-treatment.' },

@@ -2,7 +2,10 @@ import type { Metadata } from 'next';
 import PageHero from '@/components/ui/PageHero';
 import { SITE } from '@/lib/constants';
 
-export const metadata: Metadata = { title: 'Corporate Chair Massage | Well Kneaded' };
+export const metadata: Metadata = {
+  title: 'Corporate Chair Massage | Well Kneaded',
+  description: 'On-site corporate chair massage for Atlanta-area businesses. Boost employee morale and productivity. Starting at $15/employee.',
+};
 
 const BENEFITS = [
   { title: 'Decreases Employee Stress', desc: 'Stress-related turnover and absenteeism cost companies an estimated $200 billion annually. Massage lowers anxiety and hostility.' },
@@ -19,13 +22,16 @@ export default function CorporatePage() {
       <PageHero title="Corporate Chair Massage" subtitle="Healthy employees are productive employees." />
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto space-y-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {BENEFITS.map(({ title, desc }) => (
-              <div key={title} className="bg-[var(--surface)] p-6 rounded-sm">
-                <h2 className="font-medium text-[var(--text)] mb-2">{title}</h2>
-                <p className="text-sm text-[var(--taupe)] leading-relaxed">{desc}</p>
-              </div>
-            ))}
+          <div>
+            <h2 className="font-[family-name:var(--font-cormorant)] text-2xl font-medium text-[var(--text)] mb-8">Why Corporate Massage?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {BENEFITS.map(({ title, desc }) => (
+                <div key={title} className="bg-[var(--surface)] p-6 rounded-sm">
+                  <h3 className="font-medium text-[var(--text)] mb-2">{title}</h3>
+                  <p className="text-sm text-[var(--taupe)] leading-relaxed">{desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
           <div className="text-center bg-[var(--surface)] py-12 px-8 rounded-sm">
             <h2 className="font-[family-name:var(--font-cormorant)] text-2xl font-medium text-[var(--text)] mb-4">Get a Quote</h2>
