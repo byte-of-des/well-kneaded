@@ -1,9 +1,10 @@
 // app/schedule/page.tsx
+import type { Metadata } from 'next';
 import PageHero from '@/components/ui/PageHero';
 import BookingButton from '@/components/ui/BookingButton';
 import Link from 'next/link';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Schedule an Appointment | Well Kneaded',
 };
 

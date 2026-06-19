@@ -16,7 +16,7 @@ export default function MeetTheTeamPage() {
             { label: 'Career Opportunities', href: '/meet-the-team/careers', desc: 'Join the Well Kneaded team. View open positions and apply.' },
           ].map((item) => (
             <Link key={item.href} href={item.href} className="group block bg-[var(--surface)] p-8 rounded-sm hover:shadow-md transition-shadow">
-              <h3 className="font-[family-name:var(--font-cormorant)] text-2xl font-medium text-[var(--text)] mb-3 group-hover:text-[var(--muted)] transition-colors">{item.label}</h3>
+              <h2 className="font-[family-name:var(--font-cormorant)] text-2xl font-medium text-[var(--text)] mb-3 group-hover:text-[var(--muted)] transition-colors">{item.label}</h2>
               <p className="text-sm text-[var(--taupe)]">{item.desc}</p>
             </Link>
           ))}
