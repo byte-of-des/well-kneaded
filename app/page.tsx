@@ -1,65 +1,110 @@
-import Image from "next/image";
+import BookingButton from '@/components/ui/BookingButton';
+import ServiceCard from '@/components/ui/ServiceCard';
+import TestimonialCard from '@/components/ui/TestimonialCard';
+import { TESTIMONIALS } from '@/lib/constants';
+
+const SERVICES = [
+  { title: 'Therapeutic Massage', description: 'Deep tissue, Swedish, sports, pregnancy massage, and more — tailored to your body and pain points.', href: '/services/therapeutic-massage' },
+  { title: 'Stretch-n-Flex Therapy', description: '1-on-1 assisted stretching sessions to increase range of motion and reduce muscle tension.', href: '/services/stretch-therapy' },
+  { title: 'Wellness & Detox', description: 'Ionic foot detox, infrared sauna, red light therapy, and yoni steams for full-body restoration.', href: '/services/wellness-detox' },
+  { title: 'Corporate Chair Massage', description: 'Bring the benefits of massage to your team. Healthy employees are productive employees.', href: '/services/corporate' },
+];
+
+const PAIN_POINTS = [
+  'Sleepless nights from shoulder pain',
+  'Neck aches from long days at the desk',
+  'Migraines that won\'t respond to medication',
+  'Post-surgery stiffness and recovery',
+  'Chronic low back or hip pain',
+  'Athletic injury and muscle tension',
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <>
+      {/* Hero */}
+      <section className="bg-[var(--surface)] py-24 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-xs text-[var(--muted)] uppercase tracking-widest mb-4">Decatur, Georgia · Est. 2014</p>
+          <h1 className="font-[family-name:var(--font-cormorant)] text-5xl md:text-6xl font-medium text-[var(--text)] mb-6 leading-tight">
+            Pain Management.<br />Natural Solutions.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-[var(--taupe)] text-lg leading-relaxed max-w-2xl mx-auto mb-10">
+            Affordable, comfortable, and therapeutic experiences that deliver real results — naturally. Specializing in post-surgery relief, chronic conditions, and injury recovery.
+          </p>
+          <BookingButton label="Schedule Your Appointment" location="both" />
+        </div>
+      </section>
+
+      {/* Welcome */}
+      <section className="py-20 px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="font-[family-name:var(--font-cormorant)] text-3xl md:text-4xl font-medium text-[var(--text)] mb-6">
+            Welcome to Well Kneaded
+          </h2>
+          <p className="text-[var(--taupe)] leading-relaxed">
+            Established in 2014 to address the overwhelming demand for an affordable, comfortable, therapeutic experience that delivers results — Naturally! We are on a mission to provide quality pain relief for people who suffer from chronic conditions through research-based treatments and natural healing.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Pain Points */}
+      <section className="bg-[var(--surface)] py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-[family-name:var(--font-cormorant)] text-3xl font-medium text-[var(--text)] text-center mb-4">
+            Sound familiar?
+          </h2>
+          <p className="text-center text-[var(--taupe)] mb-12">You don&apos;t have to keep living with it.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {PAIN_POINTS.map((point) => (
+              <div key={point} className="bg-white p-6 rounded-sm border border-[var(--surface)]">
+                <p className="text-sm text-[var(--text)]">{point}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <BookingButton label="Book Your First Session" />
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Services */}
+      <section className="py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="font-[family-name:var(--font-cormorant)] text-3xl font-medium text-[var(--text)] text-center mb-12">
+            Our Services
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {SERVICES.map((s) => (
+              <ServiceCard key={s.href} {...s} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="bg-[var(--surface)] py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="font-[family-name:var(--font-cormorant)] text-3xl font-medium text-[var(--text)] text-center mb-12">
+            What Our Clients Say
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {TESTIMONIALS.map((t) => (
+              <TestimonialCard key={t.name} {...t} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Banner */}
+      <section className="py-20 px-6 text-center">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="font-[family-name:var(--font-cormorant)] text-3xl font-medium text-[var(--text)] mb-6">
+            Ready to feel better?
+          </h2>
+          <BookingButton label="Book Now" location="both" />
+        </div>
+      </section>
+    </>
   );
 }
