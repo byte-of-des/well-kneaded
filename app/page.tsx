@@ -57,13 +57,13 @@ export default function Home() {
           <p className="text-center text-[var(--taupe)] mb-12">You don&apos;t have to keep living with it.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {PAIN_POINTS.map((point) => (
-              <div key={point} className="bg-white p-6 rounded-sm border border-[var(--surface)]">
+              <div key={point} className="bg-[var(--bg)] p-6 rounded-sm border border-[var(--surface)]">
                 <p className="text-sm text-[var(--text)]">{point}</p>
               </div>
             ))}
           </div>
           <div className="text-center mt-12">
-            <BookingButton label="Book Your First Session" />
+            <BookingButton label="Book Your First Session" location="both" />
           </div>
         </div>
       </section>
