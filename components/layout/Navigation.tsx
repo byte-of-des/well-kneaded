@@ -66,13 +66,23 @@ export default function Navigation() {
         <div className="lg:hidden bg-white border-t border-[var(--surface)] px-6 py-4 space-y-2">
           {NAV.map((item) => (
             <div key={item.href}>
-              <button
-                className="flex items-center justify-between w-full text-sm text-[var(--text)] py-2"
-                onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}
-              >
-                {item.label}
-                {item.children && <span>{openDropdown === item.label ? '−' : '+'}</span>}
-              </button>
+              {item.children ? (
+                <button
+                  className="flex items-center justify-between w-full text-sm text-[var(--text)] py-2"
+                  onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}
+                >
+                  {item.label}
+                  <span>{openDropdown === item.label ? '−' : '+'}</span>
+                </button>
+              ) : (
+                <Link
+                  href={item.href}
+                  className="block w-full text-sm text-[var(--text)] py-2"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              )}
               {item.children && openDropdown === item.label && (
                 <div className="pl-4 space-y-1">
                   {item.children.map((child) => (
