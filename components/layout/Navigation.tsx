@@ -12,8 +12,9 @@ export default function Navigation() {
     <header className="sticky top-0 z-50 bg-[var(--white)] border-b border-[var(--surface)] shadow-sm">
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
         {/* Logo */}
-        <Link href="/" className="font-[family-name:var(--font-cormorant)] text-xl font-semibold tracking-wide text-[var(--text)]">
-          Well Kneaded
+        <Link href="/" className="flex flex-col leading-tight">
+          <span className="font-[family-name:var(--font-cormorant)] text-xl font-semibold tracking-wide text-[var(--text)]">Well Kneaded</span>
+          <span className="text-[10px] tracking-widest text-[var(--muted)] uppercase">Massage Therapies + Holistic Health + Skin Care</span>
         </Link>
 
         {/* Desktop Nav */}
