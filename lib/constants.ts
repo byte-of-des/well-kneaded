@@ -37,7 +37,9 @@ export const SOCIAL = {
   instagram: 'https://www.instagram.com/wellkneadeddecatur',
 };
 
-export const NAV = [
+type NavItem = { label: string; href: string; children?: { label: string; href: string }[] };
+
+export const NAV: NavItem[] = [
   { label: 'Home', href: '/' },
   {
     label: 'Meet the WK Crew',
