@@ -23,16 +23,40 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[var(--surface)] py-24 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-xs text-[var(--muted)] uppercase tracking-widest mb-4">Decatur, Georgia · Est. 2014</p>
-          <h1 className="font-[family-name:var(--font-cormorant)] text-5xl md:text-6xl font-medium text-[var(--text)] mb-6 leading-tight">
-            Pain Management.<br />Natural Solutions.
-          </h1>
-          <p className="text-[var(--taupe)] text-lg leading-relaxed max-w-2xl mx-auto mb-10">
-            Affordable, comfortable, and therapeutic experiences that deliver real results — naturally. Specializing in post-surgery relief, chronic conditions, and injury recovery.
-          </p>
-          <BookingButton label="Schedule Your Appointment" location="both" />
+      <section className="bg-[var(--surface)] py-16 px-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left — text */}
+          <div>
+            <p className="text-xs text-[var(--muted)] uppercase tracking-widest mb-4">Decatur, Georgia · Est. 2014</p>
+            <h1 className="font-[family-name:var(--font-cormorant)] text-5xl md:text-6xl font-medium text-[var(--text)] mb-6 leading-tight">
+              Pain Management.<br />Natural Solutions.
+            </h1>
+            <p className="text-[var(--taupe)] text-lg leading-relaxed mb-10">
+              Affordable, comfortable, and therapeutic experiences that deliver real results — naturally. Specializing in post-surgery relief, chronic conditions, and injury recovery.
+            </p>
+            <BookingButton label="Schedule Your Appointment" location="both" />
+          </div>
+
+          {/* Right — founder video portrait */}
+          <div className="flex flex-col">
+            <div className="relative overflow-hidden rounded-t-lg" style={{ aspectRatio: '3/4', background: 'var(--surface)' }}>
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover"
+                style={{ mixBlendMode: 'multiply' }}
+              >
+                <source src="/videos/founder-video.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div className="bg-[var(--text)] rounded-b-lg px-6 py-4 flex items-center justify-center gap-0 flex-wrap">
+              {['LMT · Licensed', 'MLD Certified', 'GA Licensed'].map((cred, i, arr) => (
+                <span key={cred} className="text-[10px] font-light text-white/40 uppercase tracking-widest px-4 border-r border-white/10 last:border-r-0">{cred}</span>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
