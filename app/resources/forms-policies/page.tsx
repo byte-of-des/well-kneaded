@@ -14,7 +14,7 @@ export default function FormsPoliciesPage() {
         <div className="max-w-3xl mx-auto space-y-12">
           <div>
             <h2 className="font-[family-name:var(--font-cormorant)] text-2xl font-medium text-[var(--text)] mb-4">Intake Forms</h2>
-            <p className="text-[var(--taupe)] mb-6 text-sm">Please click the links and fill out the forms below prior to your first appointment.</p>
+            <p className="text-[var(--taupe)] mb-6 text-sm">Forms are available at the front desk or by contacting us directly prior to your first appointment.</p>
             <ul className="space-y-3">
               {['General Client Intake Form', 'COVID-19 Waiver', 'Fertility Massage Intake Form', 'Yoni Steam Intake Form'].map((form) => (
                 <li key={form} className="flex items-center gap-2 text-sm">

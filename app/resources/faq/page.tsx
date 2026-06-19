@@ -24,9 +24,10 @@ export default function FAQPage() {
       <PageHero title="Frequently Asked Questions" subtitle="This is your session. Speak up — we're here to help." />
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto space-y-6">
+          <h2 className="sr-only">Questions & Answers</h2>
           {FAQS.map(({ q, a }) => (
             <div key={q} className="bg-[var(--surface)] p-8 rounded-sm">
-              <h2 className="font-medium text-[var(--text)] mb-3">{q}</h2>
+              <h3 className="font-medium text-[var(--text)] mb-3">{q}</h3>
               <p className="text-sm text-[var(--taupe)] leading-relaxed">{a}</p>
             </div>
           ))}
