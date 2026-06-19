@@ -17,8 +17,8 @@ export default function ContactPage() {
           <div className="space-y-8">
             <div>
               <h2 className="font-[family-name:var(--font-cormorant)] text-xl font-medium text-[var(--text)] mb-3">Get in Touch</h2>
-              <p className="text-sm text-[var(--taupe)]">{SITE.phone}</p>
-              <p className="text-sm text-[var(--taupe)]">{SITE.email}</p>
+              <a href={`tel:${SITE.phone.replace(/\D/g, '')}`} className="block text-sm text-[var(--taupe)] hover:text-[var(--muted)] transition-colors">{SITE.phone}</a>
+              <a href={`mailto:${SITE.email}`} className="block text-sm text-[var(--taupe)] hover:text-[var(--muted)] transition-colors">{SITE.email}</a>
               <div className="flex gap-4 mt-3">
                 <a href={SOCIAL.facebook} target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--muted)] hover:underline">Facebook</a>
                 <a href={SOCIAL.instagram} target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--muted)] hover:underline">Instagram</a>

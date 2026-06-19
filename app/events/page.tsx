@@ -39,7 +39,7 @@ export default function EventsPage() {
               {PAST_EVENTS.map(({ date, title, time, location, desc }) => (
                 <div key={title} className="bg-[var(--surface)] p-6 rounded-sm">
                   <p className="text-xs text-[var(--muted)] uppercase tracking-wide mb-2">{date} · {time}</p>
-                  <h3 className="font-medium text-[var(--text)] mb-1">{title}</h3>
+                  <h3 className="font-[family-name:var(--font-cormorant)] font-medium text-[var(--text)] mb-1">{title}</h3>
                   <p className="text-xs text-[var(--taupe)] mb-2">{location}</p>
                   <p className="text-sm text-[var(--taupe)]">{desc}</p>
                 </div>
