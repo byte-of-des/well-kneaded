@@ -18,7 +18,7 @@ export const LOCATIONS = [
     name: 'Satellite — Church Street',
     address: '603 Church St (Lotus of Life)',
     city: 'Decatur, GA 30030',
-    bookingUrl: 'https://www.massagebook.com/biz/WellKneadedMassageChurch',
+    bookingUrl: null,
   },
 ];
 
