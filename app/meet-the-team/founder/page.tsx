@@ -46,7 +46,7 @@ export default function FounderPage() {
               <div>
                 <h2 className="font-[family-name:var(--font-cormorant)] text-2xl font-medium text-[var(--text)] mb-4">Background</h2>
                 <p className="text-[var(--taupe)] leading-relaxed mb-4">
-                  Shanese has been an educator since 2002 and a massage therapist since 2012. She founded Well Kneaded LLC in 2013, driven by her own personal experience with hip dysplasia and chronic pain from childhood into adulthood.
+                  Shanese has been an educator since 2002 and a massage therapist since 2012. She founded Well Kneaded LLC in 2014, driven by her own personal experience with hip dysplasia and chronic pain from childhood into adulthood.
                 </p>
                 <p className="text-[var(--taupe)] leading-relaxed">
                   Nothing makes her happier than helping clients feel better and get through their day with less pain and discomfort. Well Kneaded specializes in cases others avoid — offering pain management, pain education, and self-care options for complicated chronic conditions.

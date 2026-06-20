@@ -41,8 +41,8 @@ export default function Footer() {
           <h4 className="text-sm font-medium uppercase tracking-widest text-white/50 mb-4">Hours</h4>
           <div className="space-y-1.5">
             {HOURS.map(({ day, hours }) => (
-              <div key={day} className="flex justify-between text-sm">
-                <span className="text-white/60 w-28">{day}</span>
+              <div key={day} className="flex gap-3 text-sm">
+                <span className="text-white/60 flex-shrink-0 w-24">{day}</span>
                 <span className="text-white/90">{hours}</span>
               </div>
             ))}
@@ -50,7 +50,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/10 max-w-7xl mx-auto px-6 py-4 flex justify-between items-center text-xs text-white/40">
+      <div className="border-t border-white/10 max-w-7xl mx-auto px-6 pt-4 pb-20 lg:pb-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-xs text-white/40">
         <span>© {SITE.founded}–{new Date().getFullYear()} {SITE.name}</span>
         <Link href="/privacy-policy" className="hover:text-white/70 transition-colors">Privacy Policy</Link>
       </div>

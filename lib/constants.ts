@@ -12,7 +12,7 @@ export const LOCATIONS = [
     name: 'Main — McConnell Drive',
     address: '1270 McConnell Drive Suite B',
     city: 'Decatur, GA 30033',
-    bookingUrl: 'https://www.massagebook.com/biz/WellKneadedMassage',
+    bookingUrl: 'https://www.massagebook.com/therapists/WellKneadedBodyWorkandMassage?src=external',
   },
   {
     name: 'Satellite — Church Street',
@@ -40,27 +40,28 @@ export const SOCIAL = {
 type NavItem = { label: string; href: string; children?: { label: string; href: string }[] };
 
 export const NAV: NavItem[] = [
-  { label: 'Home', href: '/' },
   {
-    label: 'Meet the WK Crew',
+    label: 'About',
     href: '/meet-the-team',
     children: [
-      { label: 'Meet Our Founder/CEO', href: '/meet-the-team/founder' },
+      { label: 'Meet Our Founder', href: '/meet-the-team/founder' },
       { label: 'Meet Our Staff', href: '/meet-the-team/staff' },
       { label: 'Career Opportunities', href: '/meet-the-team/careers' },
     ],
   },
   {
-    label: 'Rates & Services',
+    label: 'Services',
     href: '/services',
     children: [
       { label: 'Therapeutic Massage', href: '/services/therapeutic-massage' },
       { label: 'Stretch-n-Flex Therapy', href: '/services/stretch-therapy' },
+      { label: 'Nutrition Response Testing™', href: '/nutrition-response-testing' },
       { label: 'Wellness & Detox', href: '/services/wellness-detox' },
+      { label: 'CryoSkin Body Contouring', href: '/services/cryoskin' },
+      { label: 'Skin Care', href: '/services/skincare' },
       { label: 'Corporate Chair Massage', href: '/services/corporate' },
     ],
   },
-  { label: 'Nutrition Response Testing™', href: '/nutrition-response-testing' },
   {
     label: 'Resources',
     href: '/resources',
@@ -72,8 +73,8 @@ export const NAV: NavItem[] = [
       { label: 'Referral Network', href: '/resources/referral-network' },
     ],
   },
+  { label: 'Events', href: '/events' },
   { label: 'Contact', href: '/contact' },
-  { label: 'Event Calendar', href: '/events' },
 ];
 
 export const TESTIMONIALS = [

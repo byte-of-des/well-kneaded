@@ -1,5 +1,7 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
+/* ── Brand tokens (used via var() throughout the site) ── */
 :root {
   --bg: #f7f4f0;
   --surface: #e8e0d8;
@@ -7,9 +9,46 @@
   --muted: #7a8c7e;
   --taupe: #b8a99a;
   --white: #ffffff;
+  --accent: #1FAABF;
+  --accent-light: #e8f6f9;
 }
 
 body {
   background-color: var(--bg);
   color: var(--text);
+}
+
+/* ── Tailwind v4 color tokens (for shadcn components) ── */
+@theme inline {
+  --color-background: #f7f4f0;
+  --color-foreground: #2c2c2c;
+  --color-muted: #e8e0d8;
+  --color-muted-foreground: #9a8a7c;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #2c2c2c;
+  --color-border: #d4c8bc;
+  --color-input: #d4c8bc;
+  --color-ring: #1FAABF;
+  --color-primary: #2c2c2c;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #e8e0d8;
+  --color-secondary-foreground: #2c2c2c;
+  --color-accent: #1FAABF;
+  --color-accent-foreground: #ffffff;
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+
+  /* Accordion animations */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+}
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
 }
